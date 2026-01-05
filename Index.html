@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Gabriel 💗</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+.heart {
+  position: relative;
+  width: 220px;
+  height: 200px;
+  background: red;
+  transform: rotate(-45deg);
+  animation: beat 1.2s infinite, color 4s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 200px;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -110px;
+  left: 0;
+}
+
+.heart::after {
+  left: 110px;
+  top: 0;
+}
+
+@keyframes beat {
+  0%, 100% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-45deg) scale(1.1); }
+}
+
+@keyframes color {
+  0% { background: #ff2d2d; }
+  50% { background: #ff5da2; }
+  100% { background: #ff2d2d; }
+}
+
+.text {
+  position: absolute;
+  width: 180px;
+  transform: rotate(45deg);
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  top: 50px;
+  left: 20px;
+}
+
+.date {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: 12px;
+}
+.spark {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: pink;
+  border-radius: 50%;
+  animation: spark 2s infinite;
+}
+
+@keyframes spark {
+  0% { opacity: 1; transform: translate(0,0); }
+  100% { opacity: 0; transform: translate(-60px,-80px); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="heart">
+  <div class="text">
+Gabriel desde q estoy contigo cada día se siente muy especial a tu lado conozco la felicidad que siempre estaba buscando, no necesitas cambiar nada de ti porque TODO es perfecto, eres el mejor novio q necesita alguien, gracias por estar conmigo disfruto mucho estar contigo eres mi lugar seguro te amo demasiado mi niño lindo💗
+  </div>
+</div>
+
+<div class="date">21/9/2025</div>
+
+<div class="spark" style="top:60%; left:55%"></div>
+<div class="spark" style="top:50%; left:45%"></div>
+<div class="spark" style="top:40%; left:50%"></div>
+
+</body>
+</html>
